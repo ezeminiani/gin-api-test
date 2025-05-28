@@ -1,0 +1,30 @@
+definitions:
+  health.HealthCheckResponse:
+    properties:
+      status:
+        type: string
+    type: object
+info:
+  contact:
+    email: support@teste.com.br
+    name: API Support
+    url: http://www.teste.com.br
+paths:
+  /v1/helpers/health:
+    get:
+      consumes:
+      - application/json
+      description: do ping
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/health.HealthCheckResponse'
+        "500":
+          description: Internal Server Error
+      summary: ping example
+      tags:
+      - example
+swagger: "2.0"
