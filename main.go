@@ -50,5 +50,5 @@ func main() {
 
 	// Start the server
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
-	r.Run(":8080")
+	r.Run(":3000")
 }
